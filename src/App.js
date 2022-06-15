@@ -35,9 +35,6 @@ function App() {
           appDrawer
         */
       }
-      <Button variant="contained">
-       Test
-      </Button>
       </Container>
     </ThemeProvider>
   );

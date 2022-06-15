@@ -2,13 +2,22 @@
 import {useTheme} from '@mui/material/styles'
 import {useMediaQuery} from '@mui/material'
 
+// components
+import AppbarDesktop from './AppbarDesktop'
+import AppbarMobile from './AppbarMobile'
+
+
 const Appbar = () => {
 	
 	const theme = useTheme()
 	const matches = useMediaQuery(theme.breakpoints.down('md'))
+	
 	return (
 		<>
-			{matches ? <h1>Mobile</h1> : <h1>Desktop</h1>}
+			{ matches 
+				? <AppbarMobile matches={matches} /> 
+				: <AppbarDesktop matches={matches} /> 
+			}
 		</>
 		)
 }
