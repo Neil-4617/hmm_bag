@@ -15,9 +15,9 @@ export const Colors = {
 
 	// Greys
 	dim_grey:"#696969",
-	dove_gray:"#d5d5d5",
+	dove_grey:"#d5d5d5",
 	body_bg:"#f3f6f9",
-	light_gray:"rgb(230,230,230)",
+	light_grey:"rgb(230,230,230)",
 
 	// Solid Color
 	white:"#fff",

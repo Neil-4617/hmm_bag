@@ -1,6 +1,5 @@
 // Material UI
 import {ThemeProvider} from '@mui/material/styles'
-import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
 
 import {useEffect} from 'react'
@@ -10,6 +9,8 @@ import theme from './styles/theme/index.js'
 
 // Components
 import Appbar from './components/appbar/index.js'
+import Banner from './components/banner/index.js'
+
 
 function App() {
 
@@ -24,9 +25,9 @@ function App() {
         sx={{background: 'fff'}} 
       >
           <Appbar />
+          <Banner />
       {
         /*
-          Banner
           Promotions
           title
           products
