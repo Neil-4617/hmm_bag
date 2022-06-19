@@ -1,4 +1,15 @@
 // Material UI
+import Box from '@mui/material/Box'
+import Slide from '@mui/material/Slide'
+
+// React
+import { useState, useEffect, useRef } from 'react'
+
+// style
+import { 
+	PromotionsContainer,
+	MessageText
+	} from '../../styles/promotions/index'
 
 
 const messages = [
@@ -8,8 +19,48 @@ const messages = [
 ]
 
 const Promotions = () => {
+	const containerRef = useRef()
+	const [messageIndex, setMessageIndex] = useState(0)
+	const [show, setShow] = useState(true)
+
+	useEffect(() => {
+	
+		setTimeout(()=> {
+			setShow(false)
+		}, 3000)
+
+		const intervalId = setInterval(() => {
+			setMessageIndex(i => (i + 1) % messages.length)
+
+			setShow(true)
+			
+			setTimeout(()=> {
+				setShow(false)
+			}, 3000)
+		}, 4000)
+		return () => {
+			clearInterval(intervalId)
+		}
+	}, [])
+
 	return (
-		
+		<PromotionsContainer ref={containerRef}>
+			<Slide
+				container={containerRef.current}
+				direction = {show ? "left" : "right"}
+				in = {show}
+				timeout={{
+					enter: 500,
+					exit: 100
+				}}
+			>
+				<Box display={"flex"} justifyContent="center" alignItems={"center"} >
+					<MessageText>
+						{messages[messageIndex]}
+					</MessageText>
+				</Box>
+			</Slide>
+		</PromotionsContainer>
 	)
 }
 
