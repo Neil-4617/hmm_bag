@@ -9,7 +9,8 @@ import {
 	BannerContent,
 	BannerTitle,
 	BannerDescription,
-	BannerImage
+	BannerImage,
+	BannerShopButton
 	} from '../../styles/banner/index' 
 
 
@@ -25,6 +26,7 @@ const Banner = () => {
 				<BannerDescription variant="subtitle">
 					A classic-stylish-leathered material, tailored with a high quality fabrics. Comfort your lifestyle a decent color variation. 					
 				</BannerDescription>
+				<BannerShopButton color="primary">Shop Now</BannerShopButton>
 			</BannerContent>
 		</BannerContainer>
 	)

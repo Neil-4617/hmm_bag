@@ -1,5 +1,10 @@
+// Material UI
 import {createTheme} from '@mui/material/styles'
 
+//  Polished
+import { lighten } from 'polished'
+
+// Custom Color
 export const Colors = {
 	primary: "#5f2c3e",
 	secondary: "#d1adcc",
@@ -35,10 +40,31 @@ const theme = createTheme({
 	},
 
 	components : {
+		// custom button
 		MUIButton:{
 			defaultProps:{
 				 disableRipple: true,
 				 disableElevation:true
+			}
+		},
+		// custom shop button
+		MyShopButton: {
+			styleOverrides: {
+				root: {
+					color: Colors.white
+				},
+				primary: {
+					background: Colors.primary,
+					"&:hover": {
+						background: lighten(0.05, Colors.primary),
+					}
+				},
+				secondary: {
+					background: Colors.secondary,
+					"&:hover": {
+						background: lighten(0.05, Colors.secondary),
+					}
+				},
 			}
 		}
 	}
