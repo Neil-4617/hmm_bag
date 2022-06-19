@@ -11,10 +11,11 @@ import {useEffect} from 'react'
 import theme from './styles/theme/index.js'
 
 // Components
-import Appbar from './components/appbar/index.js'
-import Banner from './components/banner/index.js'
-import Promotions from './components/promotions/index.js'
-import Products from './components/products/index.js'
+import Appbar from './components/appbar'
+import Banner from './components/banner'
+import Promotions from './components/promotions'
+import Products from './components/products'
+import Footer from './components/footer'
 
 
 function App() {
@@ -36,9 +37,10 @@ function App() {
             <Typography variant="h4">Our Products</Typography>
           </Box>
           <Products />
+          <Footer />
       {
         /*
-          footer
+          
           searchbox
           appDrawer
         */

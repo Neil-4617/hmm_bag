@@ -2,7 +2,7 @@
 import Typography from '@mui/material/Typography'
 
 // Style
-import { ProductMetaWrapper } from '../../styles/products/index'
+import { ProductMetaWrapper } from '../../styles/products'
 // Animation
 // Components
 

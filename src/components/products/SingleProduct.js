@@ -12,7 +12,7 @@ import {
 	ProductFavButton,
 	ProductActionButton,
 	ProductAddToCart
-	} from '../../styles/products/index'
+	} from '../../styles/products'
 
 // component
 import ProductMeta from './ProductMeta'

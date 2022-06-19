@@ -7,7 +7,7 @@ import SearchIcon from '@mui/icons-material/Search'
 import {
 	AppbarContainer,
 	AppbarHeader
-	} from '../../styles/appbar/index'
+	} from '../../styles/appbar'
 
 // components
 import Actions from './Actions' 

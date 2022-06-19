@@ -11,7 +11,7 @@ import Actions from './Actions'
 import { AppbarContainer, 
 		AppbarHeader, 
 		MyList
-		} from '../../styles/appbar/index'
+		} from '../../styles/appbar'
 
 
 const AppbarDesktop = ({matches}) => {

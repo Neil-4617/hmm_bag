@@ -5,7 +5,7 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
 // Style/Themes
-import {Colors} from '../theme/index'
+import {Colors} from '../theme'
 
 export const BannerContainer = styled(Box)(({theme}) =>({
 	display: 'flex',

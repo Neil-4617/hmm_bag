@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid'
 // style
 
 // Products Data
-import { products } from '../../data/index'
+import { products } from '../../data'
 
 // Components
 import SingleProduct from './SingleProduct'

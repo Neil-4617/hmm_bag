@@ -7,14 +7,13 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import PersonIcon from '@mui/icons-material/Person'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 
-// components
 // styles
 import {
 		MyList,
 		ActionIconsContainerMobile,
 		ActionIconsContainerDesktop
-		} from '../../styles/appbar/index'
-import { Colors } from '../../styles/theme/index'
+		} from '../../styles/appbar'
+import { Colors } from '../../styles/theme'
 
 
 const Actions = ({matches}) => {

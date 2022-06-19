@@ -11,7 +11,7 @@ import {
 	BannerDescription,
 	BannerImage,
 	BannerShopButton
-	} from '../../styles/banner/index' 
+	} from '../../styles/banner' 
 
 
 const Banner = () => {
