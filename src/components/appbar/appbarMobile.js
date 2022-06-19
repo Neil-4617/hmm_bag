@@ -12,11 +12,16 @@ import {
 // components
 import Actions from './Actions' 
 
+// Context
+import { useUIContext} from '../../context/ui'
 
 const AppbarMobile = ({matches}) => {
+
+	const { setDrawerOpen } = useUIContext() 
+
 	return (
 		<AppbarContainer>
-			<IconButton>
+			<IconButton onClick={() => setDrawerOpen(true)} >
 				<MenuIcon />
 			</IconButton>
 			<AppbarHeader textAlign={"center"} variant="h4">

@@ -3,13 +3,14 @@
 import '@fontsource/montez'
 
 // Material UI
-import {styled} from '@mui/material/styles'
+import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
+import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import List from '@mui/material/List'
 
 // custom color
-import {Colors} from '../theme/index'
+import {Colors} from '../theme'
 
 // container
 export const AppbarContainer = styled(Box)(() =>({
@@ -52,4 +53,11 @@ export const ActionIconsContainerMobile = styled(Box)(() =>({
 
 export const ActionIconsContainerDesktop = styled(Box)(() =>({
 	flexGrow: 0
+}));
+
+export const DrawerCloseButton = styled(IconButton)(()=>({
+	position: 'absolute',
+	top: 10,
+	left: '250px',
+	zIndex: 1999
 }));
