@@ -40,7 +40,7 @@ const AppDrawer = () => {
 			)}
 
 			{/* Drawer Menu */}
-			<Drawer open={DrawerCloseButton}>
+			<Drawer open={drawerOpen}>
 				<List>
 					<ListItemButton>
 						<ListItemText>Home</ListItemText>

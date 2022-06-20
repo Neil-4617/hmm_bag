@@ -20,6 +20,7 @@ import Promotions from './components/promotions'
 import Products from './components/products'
 import Footer from './components/footer'
 import AppDrawer from './components/drawer'
+import SearchBox from './components/search'
 
 
 function App() {
@@ -44,12 +45,7 @@ function App() {
             <Products />
             <Footer />
             <AppDrawer />
-            {
-              /*
-                
-                searchbox
-              */
-            }
+            <SearchBox />
           </UIProvider>
       </Container>
     </ThemeProvider>
