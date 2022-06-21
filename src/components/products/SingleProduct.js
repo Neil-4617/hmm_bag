@@ -14,10 +14,17 @@ import {
 	ProductAddToCart
 	} from '../../styles/products'
 
-// component
+// Components
 import ProductMeta from './ProductMeta'
+import ProductDetail from '../productdetail'
+
+// Custom Hook
+import useDialogModel from '../../hooks/useDialogModel'
 
 const SingleProduct = ({matches, product}) => {
+
+	const [ ProductDetailDialog, showProductDetailDialog] = useDialogModel(ProductDetail)
+
 	return (
 		<>
 			<Product>
@@ -31,13 +38,14 @@ const SingleProduct = ({matches, product}) => {
 						<ProductActionButton>
 							<ShareIcon color="primary" />
 						</ProductActionButton>
-						<ProductActionButton>
+						<ProductActionButton onClick={() => showProductDetailDialog()} >
 							<FitScreenIcon color="primary" />
 						</ProductActionButton>
 					</Stack>
 				</ProductActionWrapper>
 			</Product>
 			<ProductAddToCart variant="contained">Add to cart</ProductAddToCart>
+			<ProductDetailDialog product={product} />
 		</>
 	) 
 }

@@ -16,11 +16,17 @@ import {
 
 // component
 import ProductMeta from './ProductMeta'
+import ProductDetail from '../productdetail'
+
+// Custom Hooks
+import useDialogModel from '../../hooks/useDialogModel'
 
 import { useState } from 'react'
 
 
-const SingleProduct = ({matches, product}) => {
+const SingleProductDesktop = ({matches, product}) => {
+
+	const [ ProductDetailDialog, showProductDetailDialog] = useDialogModel(ProductDetail)
 
 	const [showOptions, setShowOptions] = useState(false)
 
@@ -51,15 +57,16 @@ const SingleProduct = ({matches, product}) => {
 						<ProductActionButton>
 							<ShareIcon color="primary" />
 						</ProductActionButton>
-						<ProductActionButton>
+						<ProductActionButton onClick={() => showProductDetailDialog()}>
 							<FitScreenIcon color="primary" />
 						</ProductActionButton>
 					</Stack>
 				</ProductActionWrapper>
 			</Product>
 			<ProductMeta product={product} matches={matches} />
+			<ProductDetailDialog product={product} />
 		</>
 	) 
 }
 
-export default SingleProduct
+export default SingleProductDesktop
